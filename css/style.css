@@ -50,7 +50,7 @@ html{
     display: flex;
     justify-content: center;
     height: 1000px;
-    background: url(../img/background.svg);
+    background: url(../img/background.svg) 59%;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 24px;
@@ -150,7 +150,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/boards.svg);
+    background: url(../img/boards.svg) center;
     width: 580px;
     height: 580px;
     margin-right: 20px;
@@ -169,7 +169,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/revs.svg);
+    background: url(../img/revs.svg) center;
     width: 580px;
     height: 580px;
     font-style: normal;
@@ -183,7 +183,7 @@ html{
     line-height: 23px;
 }
 .skateboards{
-    background: url(../img/background__skateboard.svg);
+    background: url(../img/background__skateboard.svg) left;
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
@@ -228,6 +228,49 @@ html{
     padding: 5px 66px;
     border: none;
 }
+.rev{
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+.rev__foto{
+    margin-right: 40px;
+}
+.rev__foto :first-child{
+    margin-right: 20px;
+}
+.rev__txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.rev__txt h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+}
+.rev__txt p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000000;
+    margin: 21px 0 18px;
+}
+.rev__txt button{
+    width: 101px;
+    background-color: #FF4A32;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 16px;
+    border: none;
+}
 @media screen and (max-width: 1180px) {
     .choice__image{
         display: block;
@@ -240,6 +283,28 @@ html{
 @media screen and (max-width: 1140px) {
     .header__left img{
         margin-right: 0px;
+    }
+    .rev{
+        display: block;
+        justify-content: center;
+        margin-top: 44px;
+    }
+    .rev__foto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .rev__foto img{
+        width: 380px;
+    }
+    .rev__foto :first-child{
+        margin: 0 0 20px;
+    }
+    .rev__txt{
+        align-items: center;
+        margin-top: 40px;
+        text-align: center;
     }
 }
 @media screen and (max-width: 1120px) {
@@ -300,5 +365,14 @@ html{
     .choice__image__second{
         width: 250px;
         height: 250px;
+    }
+    .choice__text p{
+        font-size: 12px;
+    }
+    .rev__foto img{
+        width: 250px;
+    }
+    .rev__txt p{
+        font-size: 12px;
     }
 }
