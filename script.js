@@ -1,36 +1,30 @@
-const plus = (a,b) =>{
-    result = a + b
-    return result
+const delOnThree = (c) =>{
+    c = [];
+    for (i = 0 ;c.length < 100; i++){
+        if ( i % 3 === 0 ){c.push(i);}
+    }
+    return c;
 }
-const minus = (a,b) =>{
-    result = a - b
-    return result
-}
-const mult = (a,b) =>{
-    result = a * b
-    return result
-}
-const divis = (a,b) =>{
-    result = a / b
-    return result
-}
-console.log(divis(10,10))
+let arr = delOnThree();
+console.log(arr);
 
-/*
-true + false = 1
-8 / "2" = 4
-"number" + 5 + 1 = "number51"
-5 + 1 + "number" = "6number"
-7 && 2 = 2
-2 && 7 = 7
-null + 1 = 1
-undefined + 1 = nan
-"five" + +"2" = five2
-'true' == true = false
-false == 'false' = false
-null == '' = true
-!!"false" == !!"true" = true
-"4" - 3 = 1
-"4px" - 3 = nan
-0 || "0" && 1  = 1
-*/
+
+const sumArr = (j) =>{
+    let sum = 0;
+    for (let i = 0; i < j.length; i++){
+        sum = sum + j[i];
+    }
+    return sum;
+}
+
+let num = [10, 10, 10, 10];
+console.log(sumArr(num));
+
+
+const averageValue = (k) =>{
+    let sum = sumArr(k);
+   return sum / k.length;
+}
+
+let fd = [5234, 763, 67893];
+console.log(averageValue(fd));
