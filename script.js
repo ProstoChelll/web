@@ -1,30 +1,39 @@
-const delOnThree = (c) =>{
-    c = [];
-    for (i = 0 ;c.length < 100; i++){
-        if ( i % 3 === 0 ){c.push(i);}
+const burger = document.querySelector(".burger")
+const mobileBackground = document.querySelector(".mobile__background")
+const leftArrow = document.querySelector(".accessories__slider__arrow__first")
+const rightArrow = document.querySelector(".accessories__slider__arrow__second")
+let position = 0
+
+burger.addEventListener("click", ()=>{
+    const mobileBurger = document.querySelector(".mobile__menu")
+    const mobileBackground = document.querySelector(".mobile__background")
+
+    mobileBurger.classList.toggle("active")
+    mobileBackground.classList.toggle("active")
+})
+
+mobileBackground.addEventListener("click", ()=>{
+    const mobileBurger = document.querySelector(".mobile__menu")
+    const mobileBackground = document.querySelector(".mobile__background")
+
+    mobileBurger.classList.remove("active")
+    mobileBackground.classList.remove("active")
+})
+
+rightArrow.addEventListener("click", ()=>{
+    if (position < 748){
+        position = position + 187
+    } else {
+        position = 748
     }
-    return c;
-}
-let arr = delOnThree();
-console.log(arr);
+    const slider = document.querySelector(".accessories__slider").style.left = -position + "px";
+})
 
-
-const sumArr = (j) =>{
-    let sum = 0;
-    for (let i = 0; i < j.length; i++){
-        sum = sum + j[i];
+leftArrow.addEventListener("click", ()=>{
+    if (position > 0){
+        position = position - 187
+    } else {
+        position = 0
     }
-    return sum;
-}
-
-let num = [10, 10, 10, 10];
-console.log(sumArr(num));
-
-
-const averageValue = (k) =>{
-    let sum = sumArr(k);
-   return sum / k.length;
-}
-
-let fd = [5234, 763, 67893];
-console.log(averageValue(fd));
+    const slider = document.querySelector(".accessories__slider").style.left = -position + "px";
+})

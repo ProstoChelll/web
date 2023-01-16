@@ -40,11 +40,65 @@ html{
     text-transform: uppercase;
     color: #000000;
 }
+.header__left ul li :hover{
+    color: #FF4A32;
+}
+.header__right img{
+    cursor: pointer;
+}
 .header__right__second{
     margin: 24px 20px 0 10px;
 }
 .burger{
     display: none;
+    cursor: pointer;
+}
+.mobile__menu{
+    position: fixed;
+    background: #FFFFFF;
+    z-index: 3;
+    right: -100%;
+    width: 30%;
+    height: 100%;
+    z-index: 3;
+    transition: all 0.425s ease 0s;
+}
+.mobile__menu.active{
+    right: 0%;
+}
+.mobile__menu ul{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+.mobile__menu ul li{
+    margin-bottom: 20px;
+}
+.mobile__menu ul li :hover{
+    color: #FF4A32;
+}
+.mobile__menu ul li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.mobile__background{
+    display: none;
+}
+.mobile__background.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #00000083;
+    z-index: 2;
 }
 .welcom{
     display: flex;
@@ -67,7 +121,6 @@ html{
     line-height: 19px;
     letter-spacing: 1px;
     color: #000000;
-
 }
 .welcom__center p span{
     font-style: normal;
@@ -88,6 +141,13 @@ html{
     color: #FFFFFF;
     padding: 5px 47px;
     border: none;
+    cursor: pointer;
+    transition-duration: 0.29s;
+}
+.welcom__center span :hover{
+    background: #ffffff00;
+    color: #FF4A32;
+    box-shadow: inset 0 0 0 2px #FF4A32
 }
 .welcom__center__right{
     background: #FF4A32;
@@ -100,6 +160,8 @@ html{
     color: #FFFFFF;
     padding: 5px 37px;
     border: none;
+    cursor: pointer;
+    transition-duration: 0.29s;
 }
 .company{
     height: 83px;
@@ -191,7 +253,7 @@ html{
     text-align: center;
     margin-top: 20px;
 }
-.skateboards__txt :first-child{
+.first__p {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -223,9 +285,16 @@ html{
     font-weight: 700;
     font-size: 15px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 5px 66px;
     border: none;
+    cursor: pointer;
+    transition-duration: 0.29s;
+}
+.skateboards__txt span :hover{
+    background: #ffffff00;
+    color: #FF4A32;
+    box-shadow: inset 0 0 0 2px #FF4A32
 }
 .rev{
     display: flex;
@@ -269,6 +338,13 @@ html{
     color: #FFFFFF;
     padding: 5px 16px;
     border: none;
+    cursor: pointer;
+    transition-duration: 0.29s;
+}
+.rev__txt span :hover{
+    background: #ffffff00;
+    color: #FF4A32;
+    box-shadow: inset 0 0 0 2px #FF4A32
 }
 .shop  {
     display: flex;
@@ -360,6 +436,7 @@ html{
 .accessories{
     display: block;
     margin-top: 70px;
+    overflow: hidden;
 }
 .accessories__txt{
     display: flex;
@@ -375,20 +452,32 @@ html{
     color: #000000;
 }
 .accessories__slider{
+    width: 100%;
     display: flex;
+    position: relative;
+    margin-left: 19px;
     justify-content: space-between;
     text-align: center;
+    transition-duration: 0.45s;
 }
 .accessories__slider p{
     margin-top: 12px;
 }
 .accessories__slider__arrow__first{
     display: flex;
+    position: absolute;
+    left: 0.5%;
+    margin-top: 70px;
+    z-index: 4;
     align-items: center;
 }
 .accessories__slider__arrow__second{
     display: flex;
     align-items: center;
+    position: absolute;
+    right: 0.5%;
+    margin-top: -170px;
+    z-index: 5;
     transform: rotate(180deg);
 }
 .accessories__slider__arrow__first :hover{
@@ -458,6 +547,9 @@ html{
 .footer__up__center ul{
     list-style: none;
 }
+.footer__up__center ul a :hover{
+    color: #FF4A32;
+}
 .footer__up__center a{
     text-decoration: none;
     font-weight: 400;
@@ -498,7 +590,8 @@ html{
     line-height: 19px;
     color: #000000;
 }
-.footer__bottom__left span{
+.footer__bottom__left a{
+    text-decoration: none;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
@@ -506,16 +599,7 @@ html{
 }
 .footer__bottom__right{
     margin-right: 130px;
-}
-@media screen and (max-width: 1394px) {
-    .accessories__slider :nth-child(8){
-        display: none;
-    }
-}
-@media screen and (max-width: 1206px) {
-    .accessories__slider :nth-child(7){
-        display: none;
-    }
+    cursor: pointer;
 }
 @media screen and (max-width: 1180px) {
     .choice__image{
@@ -582,9 +666,6 @@ html{
     }
 }
 @media screen and (max-width: 1019px) {
-    .accessories__slider :nth-child(6){
-        display: none;
-    }
     .footer__bottom{
         display: flex;
         flex-direction: column;
@@ -620,9 +701,6 @@ html{
     }
 }
 @media screen and (max-width: 833px) {
-    .accessories__slider :nth-child(5){
-        display: none;
-    }
     .footer__up{
         display: flex;
         flex-direction: column;
@@ -638,9 +716,6 @@ html{
     }
 }
 @media screen and (max-width: 649px) {
-    .accessories__slider :nth-child(4){
-        display: none;
-    }
 }
 @media screen and (max-width: 610px) {
     .choice__image__first{
@@ -654,11 +729,6 @@ html{
     .vidio iframe{
         width: 350px;
         height: 204px;
-    }
-}
-@media screen and (max-width: 461px) {
-    .accessories__slider :nth-child(3){
-        display: none;
     }
 }
 @media screen and (max-width: 414px){
@@ -692,7 +762,7 @@ html{
         width: 250px;
         height: 204px;
     }
-    .accessories__slider :nth-child(2) img{
-        width: 130px;
+    .mobile__menu ul li a{
+        font-size: 10px;
     }
 }
