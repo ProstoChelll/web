@@ -12,6 +12,9 @@ html{
    margin: 0;
    padding: 0;
 }
+.body.lock{
+    overflow: hidden;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -60,7 +63,6 @@ html{
     right: -100%;
     width: 30%;
     height: 100%;
-    z-index: 3;
     transition: all 0.425s ease 0s;
 }
 .mobile__menu.active{
@@ -262,6 +264,9 @@ html{
     color: #000000;
     margin: 44px 0 11px;
 }
+.skateboards__txt{
+    position: absolute;
+}
 .skateboards__txt h2{
     font-weight: 700;
     font-size: 45px;
@@ -295,6 +300,261 @@ html{
     background: #ffffff00;
     color: #FF4A32;
     box-shadow: inset 0 0 0 2px #FF4A32
+}
+.buy__background{
+    display: none;
+}
+.buy__background.show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background: #00000083;
+    z-index: 3;
+}
+.buy{
+    display: none;
+    width: 400px;
+    height: 50vh;
+    background: #ffffff;
+}
+.buy.show{
+    display: block;
+}
+.buy__span{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.buy__span2{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.buy__span3{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.buy__span4{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.hr__first{
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.hr__second{
+    transform: rotate(45deg);
+}
+.name{
+    margin: 10px 0 10px;
+}
+.name p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.surname{
+    margin: 10px 0 10px;
+}
+.surname p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.tel{
+    margin: 10px 0 10px;
+}
+.tel p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.email{
+    margin: 10px 0 10px;
+}
+.email p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.address{
+    margin: 10px 0 10px;
+}
+.address p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.product{
+    margin: 10px 0 10px;
+}
+.product p{
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.product__input{
+    margin: 10px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+.product__input p{
+    display: block;
+    padding-top: 1px;
+    margin: 0 10px 0 3px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+}
+.reset button{
+    margin-top: 10px;
+    background-color: #FF4A32;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 36px;
+    border: none;
+    cursor: pointer;
+}
+.next{
+    margin-top: 40px;
+    background-color: #FF4A32;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 36px;
+    border: none;
+    cursor: pointer;
+}
+.catalog__skateboards{
+    display: none;
+    width: 400px;
+    height: 40vh;
+    background: #FFFFFF;
+}
+.catalog__skateboards.show{
+    display: block;
+}
+.catalog__skateboards h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.catalog__skateboards__button{
+    margin-top: 300px;
+    background-color: #FF4A32;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 36px;
+    border: none;
+    cursor: pointer;
+}
+.catalog__revs{
+    display: none;
+    width: 400px;
+    height: 40vh;
+    background: #FFFFFF;
+}
+.catalog__revs.show{
+    display: block;
+}
+.catalog__revs h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.catalog__revs__button{
+    margin-top: 300px;
+    background-color: #FF4A32;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 36px;
+    border: none;
+    cursor: pointer;
+}
+.finish{
+    display: none;
+    width: 200px;
+    height: 15vh;
+    background: #ffffff;
+}
+.finish.show{
+    display: block;
+
+}
+.finish h2{
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #000000;
 }
 .rev{
     display: flex;
@@ -344,7 +604,6 @@ html{
 .rev__txt span :hover{
     background: #ffffff00;
     color: #FF4A32;
-    box-shadow: inset 0 0 0 2px #FF4A32
 }
 .shop  {
     display: flex;
@@ -453,9 +712,8 @@ html{
 }
 .accessories__slider{
     width: 100%;
-    display: flex;
+    display: inline-flex;
     position: relative;
-    margin-left: 19px;
     justify-content: space-between;
     text-align: center;
     transition-duration: 0.45s;
@@ -499,6 +757,9 @@ html{
     line-height: 18px;
     text-align: center;
     color: #373737;
+}
+.accessories__sliders{
+    margin-right: 21.px;
 }
 .about{
     display: flex;
@@ -601,6 +862,36 @@ html{
     margin-right: 130px;
     cursor: pointer;
 }
+@media screen and (max-width: 1876px){
+    .accessories__sliders{
+        margin-right: 43.2px;
+    }
+}
+@media screen and (max-width: 1810px){
+    .accessories__sliders{
+        margin-right: 73.3px;
+    }
+}
+@media screen and (max-width: 1720px){
+    .accessories__sliders{
+        margin-right: 99.4px;
+    }
+}
+@media screen and (max-width: 1609px){
+    .accessories__sliders{
+        margin-right: 133.5px;
+    }
+}
+@media screen and (max-width: 1437px){
+    .accessories__sliders{
+        margin-right: 165.6px;
+    }
+}
+@media screen and (max-width: 1219px){
+    .accessories__sliders{
+        margin-right: 215.7px;
+    }
+}
 @media screen and (max-width: 1180px) {
     .choice__image{
         display: block;
@@ -700,6 +991,11 @@ html{
         margin-bottom: 20px;
     }
 }
+@media screen and (max-width: 981px){
+    .accessories__sliders{
+        margin-right: 299.8px;
+    }
+}
 @media screen and (max-width: 833px) {
     .footer__up{
         display: flex;
@@ -713,6 +1009,11 @@ html{
         text-align: center;
         margin-top: 30px;
         margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 667px){
+    .accessories__sliders{
+        margin-right: 490.9px;
     }
 }
 @media screen and (max-width: 649px) {
