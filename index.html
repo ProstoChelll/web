@@ -78,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section id = "page"class = "skateboards">
+    <section class = "skateboards">
         <div class="skateboards__txt">
             <p class="first__p">High-performance</p>
             <h2>Electric Skateboards</h2>
@@ -86,58 +86,6 @@
             <span>
                 <button class = "shop__now">Shop Now</button>
             </span>
-        </div>
-        <div class="buy__background">
-            <div class = "buy">
-                <span class = "buy__span"><hr width="25px" class = "hr__first"><hr width="25px" class = "hr__second"></span>
-                <form action="#">
-                    <div class = "name">
-                        <p>имя</p>
-                        <input name="username" type="text">
-                    </div>
-                    <div class = "surname">
-                        <p>фамилия</p>
-                        <input name="surname" type="text">
-                    </div>
-                    <div class = "tel">
-                        <p>телефон</p>
-                        <input placeholder="+7 (ххх) ххх хх хх" name="userphon" type="tel">
-                    </div>
-                    <div class = "email">
-                        <p>имейл</p>
-                        <input name="useremail" type="email">
-                    </div>
-                    <div class = "address">
-                        <p>адрес</p>
-                        <input name="userlocation" type="text">
-                    </div>
-                    <div class = "product">
-                        <p>товары</p>
-                        <div class = "product__input">
-                            <input class = "product__input__skate" type="checkbox" name="board"><p>скейт</p>
-                            <input class = "product__input__revs" type="checkbox" name="revs"><p>самокат</p>
-                        </div>
-                    </div>
-                    <div class = "reset">
-                        <button type="reset">Очистить</button>
-                    </div>
-                </form>
-                <button class = "next">далее</button>
-            </div>
-            <div class = "catalog__skateboards">
-                <span class = "buy__span2"><hr width="25px" class = "hr__first"><hr width="25px" class = "hr__second"></span>
-                <h2>каталог скейтов</h2>
-                <button class = "catalog__skateboards__button">закончить</button>
-            </div>
-            <div class = "catalog__revs">
-                <span class = "buy__span3"><hr width="25px" class = "hr__first"><hr width="25px" class = "hr__second"></span>
-                <h2>каталог самокатов</h2>
-                <button class = "catalog__revs__button">закончить</button>
-            </div>
-            <div class = "finish">
-                <span class = "buy__span4"><hr width="25px" class = "hr__first"><hr width="25px" class = "hr__second"></span>
-                <h2>ваш заказ оформлен<br>и скоро будлет доставлен</h2>
-            </div>
         </div>
     </section>
     <section class = "rev">
@@ -149,7 +97,7 @@
             <h3>Boosted Rev</h3>
             <p>There's never been an electric scooter quite like<br>this. Speed past traffic at 24 mph. Go up to 22<br>miles on a single charge. You'll get there in no time<br>at all. Stop and go with the roll of your thumb. Its<br>intuitive design means there’s almost no learning<br>curve.</p>
             <span>
-                <a href="#page"><button class = "shop__now2">Shop Now</button></a>
+                <button class = "shop__now2">Shop Now</button>
             </span>
         </div>
     </section>
@@ -306,6 +254,61 @@
             </div>
         </div>
     </section>
+    <div class = "all">
+        <div class="buy__background">
+            <form class = "form" action="#">
+                <img class = "buy__img" src="img/cross.svg">
+                <div class = "name">
+                    <p>имя</p>
+                    <input name="username" type="text">
+                </div>
+                <div class = "surname">
+                    <p>фамилия</p>
+                    <input name="surname" type="text">
+                </div>
+                <div class = "tel">
+                    <p>телефон</p>
+                    <input placeholder="+7 (ххх) ххх хх хх" name="userphon" type="tel">
+                </div>
+                <div class = "email">
+                    <p>имейл</p>
+                    <input name="useremail" type="email">
+                </div>
+                <div class = "address">
+                    <p>адрес</p>
+                    <input name="userlocation" type="text">
+                </div>
+                <div class = "product">
+                    <p>товары</p>
+                    <div class = "product__input">
+                        <select id = "select" name="product__select">
+                            <option value="skate">скейты</option>
+                            <option value="rev">самокаты</option>
+                        </select>
+                    </div>
+                </div>
+                <div class = "reset">
+                    <button type="reset">Очистить</button>
+                </div>
+            </form>
+            <button class = "next">далее</button>
+            <button class = "next__notactivated">проверить</button>
+            <div class = "catalog__skateboards">
+                <img class = "buy__img2" src="img/cross.svg">
+                <h2>каталог скейтов</h2>
+                <button class = "catalog__skateboards__button">закончить</button>
+            </div>
+            <div class = "catalog__revs">
+                <img class = "buy__img3" src="img/cross.svg">
+                <h2>каталог самокатов</h2>
+                <button class = "catalog__revs__button">закончить</button>
+            </div>
+        <div class = "finish">
+            <img class = "buy__img4" src="img/cross.svg">
+            <h2>ваш заказ оформлен<br>и скоро будлет доставлен</h2>
+        </div>
+    </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -47,60 +47,51 @@ leftArrow.addEventListener("click", ()=>{
 
 
 
-
 const shop = document.querySelector(".shop__now")
-const buy = document.querySelector(".buy");
-const buyBackground = document.querySelector(".buy__background");
+const all = document.querySelector(".all")
 const shopTwo = document.querySelector(".shop__now2")
-const span = document.querySelector(".buy__span")
-const span2 = document.querySelector(".buy__span2")
-const span3 = document.querySelector(".buy__span3")
-const span4 = document.querySelector(".buy__span4")
-const chekboxSkate = document.querySelector(".product__input__skate")
-const chekboxRevs = document.querySelector(".product__input__revs")
-const button = document.querySelector(".next")
+const img = document.querySelector(".buy__img")
+const img2 = document.querySelector(".buy__img2")
+const img3 = document.querySelector(".buy__img3")
+const img4 = document.querySelector(".buy__img4")
+const buttonNotActiv = document.querySelector(".next__notactivated")
 const skate = document.querySelector(".catalog__skateboards")
 const revs = document.querySelector(".catalog__revs")
 const skateButton = document.querySelector(".catalog__skateboards__button")
 const revsButton = document.querySelector(".catalog__revs__button")
 const finish = document.querySelector(".finish")
+const form = document.querySelector(".form")
+const next = document.querySelector(".next")
+const buyBackground = document.querySelector(".buy__background")
 
 shop.addEventListener("click", () => {
-    buy.classList.toggle("show")
-    buyBackground.classList.add("show")
+    all.classList.add("show")
+    body.classList.add("lock")
 })
 
 shopTwo.addEventListener("click", () => {
-    buy.classList.toggle("show")
-    buyBackground.classList.add("show")
+    all.classList.toggle("show")
+    body.classList.add("lock")
 })
 
-span.addEventListener("click",() => {
-    buy.classList.remove("show")
-    buyBackground.classList.remove("show")
+img.addEventListener("click",() => {
+    all.classList.remove("show")
+    body.classList.remove("lock")
 })
 
-span2.addEventListener("click",() => {
+img2.addEventListener("click",() => {
     buyBackground.classList.remove("show")
     skate.classList.remove("show")
     revs.classList.remove("show")
+    all.classList.remove("show")
+    body.classList.remove("lock")
 })
 
-span3.addEventListener("click",() => {
+img3.addEventListener("click",() => {
     buyBackground.classList.remove("show")
     revs.classList.remove("show")
-})
-
-button.addEventListener("click", () => {
-    if (chekboxSkate.checked){
-        buy.classList.remove("show")
-        skate.classList.add("show")
-    } else if (chekboxRevs.checked){
-        buy.classList.remove("show")
-        revs.classList.add("show")
-    } else {
-        alert("выберите товар")
-    }
+    all.classList.remove("show")
+    body.classList.remove("lock")
 })
 
 skateButton.addEventListener("click", () => {
@@ -112,7 +103,43 @@ revsButton.addEventListener("click", () => {
     revs.classList.remove("show")
     finish.classList.add("show")
 })
-span4.addEventListener("click",() => {
+img4.addEventListener("click", () => {
     buyBackground.classList.remove("show")
     finish.classList.remove("show")
+    body.classList.remove("lock")
+    all.classList.remove("show")
+})
+buttonNotActiv.addEventListener("click", () => {
+    const userName = document.getElementsByTagName("input")[0].value
+    const user = Number(userName)
+    const surName = document.getElementsByTagName("input")[1].value
+    const userSur = Number(surName)
+    const userPhon = document.getElementsByTagName("input")[2].value
+    const userEmail = document.getElementsByTagName("input")[3].value
+    const userLocation = document.getElementsByTagName("input")[4].value
+
+    if (user / 1){
+        alert("вы зделали что то не так в поле имя, проверте еще раз")
+    } else if (userSur / 1){
+        alert("вы зделали что то не так в поле фамилия, проверте еще раз")
+    } else if (!(userPhon / 1)){
+        alert("вы зделали что то не так в поле телефон, проверте еще раз")
+    } else if (userName,surName,userPhon,userEmail,userLocation == ""){
+        alert("вы зделали что то не заполнили, проверте еще раз")
+    }  else {
+        buttonNotActiv.style.display = "none"
+    }
+})
+
+next.addEventListener("click", () => {
+    const element = document.querySelector("#select");
+    if (element.value == "skate"){
+        skate.classList.add("show")
+        form.style.display = "none"
+        next.style.display = "none"
+    } else {
+        revs.classList.add("show")
+        form.style.display = "none"
+        next.style.display = "none"
+    }
 })

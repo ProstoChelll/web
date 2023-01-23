@@ -301,62 +301,60 @@ html{
     color: #FF4A32;
     box-shadow: inset 0 0 0 2px #FF4A32
 }
+.all{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: -110%;
+}
+.all.show{
+    right: 0%;
+}
 .buy__background{
-    display: none;
-}
-.buy__background.show{
+    background: #00000065;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    background: #00000083;
-    z-index: 3;
+    justify-content: center;
 }
-.buy{
-    display: none;
-    width: 400px;
-    height: 50vh;
-    background: #ffffff;
-}
-.buy.show{
-    display: block;
-}
-.buy__span{
+.form{
     display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 339px;
+    background: #FFFFFF;
+    height: 550px;
+}
+.form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buy__img{
+    margin-left: auto;
+    width: 17px;
+    margin-top: 10px;
     margin-right: 10px;
     cursor: pointer;
 }
-.buy__span2{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+.buy__img2{
+    margin-left: auto;
+    margin-top: -80px;
     margin-right: 10px;
     cursor: pointer;
 }
-.buy__span3{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+.buy__img3{
+    margin-left: auto;
+    margin-top: -80px;
     margin-right: 10px;
     cursor: pointer;
 }
-.buy__span4{
-    display: flex;
-    justify-content: flex-end;
+.buy__img4{
+    margin-left: auto;
     margin-top: 20px;
     margin-right: 10px;
     cursor: pointer;
-}
-.hr__first{
-    position: absolute;
-    transform: rotate(-45deg);
-}
-.hr__second{
-    transform: rotate(45deg);
 }
 .name{
     margin: 10px 0 10px;
@@ -464,7 +462,8 @@ html{
     cursor: pointer;
 }
 .next{
-    margin-top: 40px;
+    position: absolute;
+    margin-top: 500px;
     background-color: #FF4A32;
     border-radius: 35px;
     font-weight: 400;
@@ -475,6 +474,30 @@ html{
     padding: 5px 36px;
     border: none;
     cursor: pointer;
+    z-index: 1;
+}
+.next__notactivated{
+    display: block;
+    position: absolute;
+    margin-top: 500px;
+    background-color: #696969;
+    border-radius: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 36px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+.all__catalog{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
 }
 .catalog__skateboards{
     display: none;
@@ -483,7 +506,12 @@ html{
     background: #FFFFFF;
 }
 .catalog__skateboards.show{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 10;
 }
 .catalog__skateboards h2{
     font-style: normal;
@@ -495,7 +523,7 @@ html{
     color: #000000;
 }
 .catalog__skateboards__button{
-    margin-top: 300px;
+    margin-top: 200px;
     background-color: #FF4A32;
     border-radius: 35px;
     font-weight: 400;
@@ -514,7 +542,12 @@ html{
     background: #FFFFFF;
 }
 .catalog__revs.show{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 10;
 }
 .catalog__revs h2{
     font-style: normal;
@@ -526,7 +559,7 @@ html{
     color: #000000;
 }
 .catalog__revs__button{
-    margin-top: 300px;
+    margin-top: 200px;
     background-color: #FF4A32;
     border-radius: 35px;
     font-weight: 400;
@@ -545,8 +578,9 @@ html{
     background: #ffffff;
 }
 .finish.show{
-    display: block;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .finish h2{
     margin-top: 30px;
@@ -604,6 +638,7 @@ html{
 .rev__txt span :hover{
     background: #ffffff00;
     color: #FF4A32;
+    box-shadow: inset 0 0 0 2px #FF4A32
 }
 .shop  {
     display: flex;
