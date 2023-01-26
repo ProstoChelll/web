@@ -256,27 +256,32 @@
     </section>
     <div class = "all">
         <div class="buy__background">
-            <form class = "form" action="#">
+            <form class = "form" action="#" onclick="treatment()">
                 <img class = "buy__img" src="img/cross.svg">
                 <div class = "name">
                     <p>имя</p>
-                    <input name="username" type="text">
+                    <input name="username" type="text" onblur="setUserName()">
+                    <span class = "username__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "surname">
                     <p>фамилия</p>
-                    <input name="surname" type="text">
+                    <input name="surname" type="text" onblur="setUserSurName()">
+                    <span class = "surname__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "tel">
                     <p>телефон</p>
-                    <input placeholder="+7 (ххх) ххх хх хх" name="userphon" type="tel">
+                    <input placeholder="+7 (ххх) ххх хх хх" name="userphon" type="tel" onblur="setUserTel()">
+                    <span class = "tel__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "email">
                     <p>имейл</p>
-                    <input name="useremail" type="email">
+                    <input name="useremail" type="email" onblur="setUserEmail()">
+                    <span class = "email__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "address">
                     <p>адрес</p>
-                    <input name="userlocation" type="text">
+                    <input name="userlocation" type="text" onblur="setUserLocation()">
+                    <span class = "userlocation__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "product">
                     <p>товары</p>
@@ -290,9 +295,9 @@
                 <div class = "reset">
                     <button type="reset">Очистить</button>
                 </div>
+                <button class = "next" onclick="return false">далее</button>
+                <button class = "next__notactivated" onclick="return false">далее</button>
             </form>
-            <button class = "next">далее</button>
-            <button class = "next__notactivated">проверить</button>
             <div class = "catalog__skateboards">
                 <img class = "buy__img2" src="img/cross.svg">
                 <h2>каталог скейтов</h2>
@@ -303,12 +308,15 @@
                 <h2>каталог самокатов</h2>
                 <button class = "catalog__revs__button">закончить</button>
             </div>
-        <div class = "finish">
-            <img class = "buy__img4" src="img/cross.svg">
-            <h2>ваш заказ оформлен<br>и скоро будлет доставлен</h2>
+            <form>
+                <div class = "finish">
+                    <img class = "buy__img4" src="img/cross.svg">
+                    <h2>ваш заказ оформлен<br>и скоро будлет доставлен</h2>
+                </div>
+            </form>
         </div>
     </div>
-    </div>
     <script src="script.js"></script>
+    <script src="homework.js"></script>
 </body>
 </html>

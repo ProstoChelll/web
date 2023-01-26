@@ -369,6 +369,12 @@ html{
     text-transform: uppercase;
     color: #000000;
 }
+.name input{
+    border: 1px solid #000000;
+}
+.name input.error{
+    border: 2px solid #ff0000;
+}
 .surname{
     margin: 10px 0 10px;
 }
@@ -381,6 +387,9 @@ html{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #000000;
+}
+.surname input.error{
+    border: 2px solid #ff0000;
 }
 .tel{
     margin: 10px 0 10px;
@@ -395,6 +404,9 @@ html{
     text-transform: uppercase;
     color: #000000;
 }
+.tel input.error{
+    border: 2px solid #ff0000;
+}
 .email{
     margin: 10px 0 10px;
 }
@@ -408,6 +420,9 @@ html{
     text-transform: uppercase;
     color: #000000;
 }
+.email input.error{
+    border: 2px solid #ff0000;
+}
 .address{
     margin: 10px 0 10px;
 }
@@ -420,6 +435,9 @@ html{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #000000;
+}
+.address input.error{
+    border: 2px solid #ff0000;
 }
 .product{
     margin: 10px 0 10px;

@@ -94,43 +94,12 @@ img3.addEventListener("click",() => {
     body.classList.remove("lock")
 })
 
-skateButton.addEventListener("click", () => {
-    skate.classList.remove("show")
-    finish.classList.add("show")
-})
-
-revsButton.addEventListener("click", () => {
-    revs.classList.remove("show")
-    finish.classList.add("show")
-})
 img4.addEventListener("click", () => {
     buyBackground.classList.remove("show")
     finish.classList.remove("show")
     body.classList.remove("lock")
     all.classList.remove("show")
 })
-buttonNotActiv.addEventListener("click", () => {
-    const userName = document.getElementsByTagName("input")[0].value
-    const user = Number(userName)
-    const surName = document.getElementsByTagName("input")[1].value
-    const userSur = Number(surName)
-    const userPhon = document.getElementsByTagName("input")[2].value
-    const userEmail = document.getElementsByTagName("input")[3].value
-    const userLocation = document.getElementsByTagName("input")[4].value
-
-    if (user / 1){
-        alert("вы зделали что то не так в поле имя, проверте еще раз")
-    } else if (userSur / 1){
-        alert("вы зделали что то не так в поле фамилия, проверте еще раз")
-    } else if (!(userPhon / 1)){
-        alert("вы зделали что то не так в поле телефон, проверте еще раз")
-    } else if (userName,surName,userPhon,userEmail,userLocation == ""){
-        alert("вы зделали что то не заполнили, проверте еще раз")
-    }  else {
-        buttonNotActiv.style.display = "none"
-    }
-})
-
 next.addEventListener("click", () => {
     const element = document.querySelector("#select");
     if (element.value == "skate"){
@@ -143,3 +112,110 @@ next.addEventListener("click", () => {
         next.style.display = "none"
     }
 })
+skateButton.addEventListener("click", () => {
+    skate.classList.remove("show")
+    finish.classList.add("show")
+})
+
+revsButton.addEventListener("click", () => {
+    revs.classList.remove("show")
+    finish.classList.add("show")
+})
+
+    const surName = document.getElementsByTagName("input")[1].value
+    const userPhon = document.getElementsByTagName("input")[2].value
+    const userEmail = document.getElementsByTagName("input")[3].value
+    const userLocation = document.getElementsByTagName("input")[4].value
+    const userNameSpan = document.querySelector(".username__span")
+    const surNameSpan = document.querySelector(".surname__span")
+    const telSpan = document.querySelector(".tel__span")
+    const emailSpan = document.querySelector(".email__span")
+    const userLocationSpan = document.querySelector(".userlocation__span")
+
+    let formElemnts = {
+        userName: "",
+        surName: "",
+        userPhon: "",
+        userEmail: "",
+        userLocation: ""
+    }
+
+const setUserName = (a) =>{
+    const input = form.username.value
+    if (input.length <= 2){
+        formElemnts.userName = ""
+        form.username.classList.add("error")
+        userNameSpan.style.display = "block"
+        return a = a + 1
+    } else {
+        formElemnts.userName = input
+        form.username.classList.remove("error")
+        userNameSpan.style.display = "none"
+    }
+}
+const setUserSurName = (a) =>{
+    const input = form.surname.value
+    if (input.length <= 2){
+        formElemnts.surName = ""
+        form.surname.classList.add("error")
+        surNameSpan.style.display = "block"
+        return a = a + 1
+    } else {
+        formElemnts.surName = input
+        form.surname.classList.remove("error")
+        surNameSpan.style.display = "none"
+    }
+}
+const setUserTel = (a) =>{
+    const input = form.userphon.value
+    if (!(input.length < 12 && input.length > 10)){
+        formElemnts.userPhon = ""
+        form.userphon.classList.add("error")
+        telSpan.style.display = "block"
+        return a = a + 1
+    } else {
+        formElemnts.userPhon = input
+        form.userphon.classList.remove("error")
+        telSpan.style.display = "none"
+    }
+}
+const setUserEmail = (a) =>{
+    const input = form.useremail.value
+    if (input.length < 1){
+        formElemnts.userEmail = ""
+        form.useremail.classList.add("error")
+        emailSpan.style.display = "block"
+        return a = a + 1
+    } else {
+        formElemnts.userEmail = input
+        form.useremail.classList.remove("error")
+        emailSpan.style.display = "none"
+    }
+}
+const setUserLocation = (a) =>{
+    const input = form.userlocation.value
+    if (input.length < 1){
+        formElemnts.userLocation = ""
+        form.userlocation.classList.add("error")
+        userLocationSpan.style.display = "block"
+        return a = a + 1
+    } else {
+        formElemnts.userLocation = input
+        form.userlocation.classList.remove("error")
+        userLocationSpan.style.display = "none"
+    }
+}
+
+const treatment = () => {
+    if (setUserName(0) == 1 || setUserSurName(0) == 1 || setUserTel(0) == 1 || setUserEmail(0) == 1 || setUserLocation(0) == 1){
+
+    } else {
+        buttonNotActiv.style.display = "none"
+    }
+}
+
+
+
+
+
+
