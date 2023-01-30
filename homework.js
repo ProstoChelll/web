@@ -1,89 +1,92 @@
-let arr = [1,2,3,4,5,6,7,8]
+let books = [{
+    name: "bookName",
+    author: "authorName",
+    pages: 150,
+    dateOfCreation: 2000
+}]
 
-let array = arr.filter((element) => {
-    return element % 2 == 0
-})
-console.log(array)
-
-
-
-let arr2 = [
-    {name: "sasha", age: 20},
-    {name: "misha", age: 30},
-    {name: "masha", age: 25}
-]
-let array2 = arr2.map((elment) => {
-    if (elment.age > 24){
-        return elment.age
+const added = (nameBook, authorBok, pagesBook, dateOfCreationBook) =>{
+    let book = {
+        name: nameBook,
+        author: authorBok,
+        pages: pagesBook,
+        dateOfCreation: dateOfCreationBook
     }
-})
-console.log(array2)
+    return book
+}
+books.push(added("asdf","asdfa",314,1723))//добавляет новый обьект в массив
+console.log(books)
 
 
-
-let arr3 = [
-    {name: "sasha", age: 20, city: "russia"},
-    {name: "sasha", age: 40, city: "russia"},
-    {name: "sasha", age: 90, city: "russia"},
-    {name: "misha", age: 30, city: "america"},
-    {name: "misha", age: 60, city: "america"},
-    {name: "misha", age: 20, city: "america"},
-    {name: "masha", age: 75, city: "canada"},
-    {name: "masha", age: 15, city: "canada"},
-    {name: "masha", age: 35, city: "canada"}
-]
-
-let i = 0
-let b = 0
-let c = 0
-
-let array3 = arr3.reduce((prev,item) => {
-        if (item.city == "russia"){
-        console.log(item.age)
+const deleted = (delBook) =>{
+    let i = 0
+    if(books[i].name == delBook){
+    } else (
         i++
-        }
-}, 0)
-console.log(i)
+    )
+    books.splice(i,1)
+}
+//deleted("asdf")удаление по имени
 
-let array3_1 = arr3.reduce((prev,item) => {
-    if (item.city == "america"){
-        console.log(item.age)
-        b++
-    }
-})
-console.log(b)
 
-let array3_2 = arr3.reduce((prev,item) => {
-    if (item.city == "canada"){
-        console.log(item.age)
-        c++
-    }
-})
-console.log(c)
+const search = (searchBook) =>{
+    let i = 0
+    if(books[i].name == searchBook){
+    } else (
+        i++
+    )
+    console.log(books[i])
+}
+//search("asdf")находит обьект по имени
 
-let booksArray = [
-    {name: "Harry Potter", author: "J.K. Rowling", genre: "fantasy", pages: 400},
-    {name: "1984", author: "George Orwell", genre: "dystopian", pages: 300},
-    {name: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "comedy", pages: 200},
-    {name: "Dune", author: "Frank Herbert", genre: "science fiction", pages: 500},
-    {name: "Ender's Game",author: "Orson Scott Card", genre: "science fiction", pages: 400},
-    {name: "The Foundation", author: "Isaac Asimov", genre: "science fiction", pages: 600},
-    {name: "The Lord of the Rings", author: "J.R.R. Tolkien", genre: "fantasy", pages: 800},
-    {name: "The Martian", author: "Andy Weir", genre: "science fiction", pages: 400},
-    {name: "The Hunger Games", author: "Suzanne Collins", genre: "dystopian", pages: 300},
-    {name: "Brave New World", author: "Aldous Huxley", genre: "dystopian", pages: 350}
-    ]
 
-books(booksArray)
-
-function books(arr) {
-    arr.map((element) => {
-        if (element.genre = "fantasy"){
-
-        } else {
-            delete arr.value//из за такого удаления ненужные обьекты удалились визуально но в массиве они все ровно присутсвуют(это видно по длине массива)
-        }
+const sort = (from, befor) =>{ //from - это значение от(от 1723). befor - значение до (до 2000)
+    let c = books.filter((currentValue) => {
+        return currentValue.dateOfCreation >= from && currentValue.dateOfCreation <= befor
     })
+    console.log(c)
+}
+//sort(1723,2000)сортировка книг по дате
+
+
+const page = (pageBook, pag) =>{ //pageBook - книга к которой применятся изменения. pag - кол-во страниц
+    let i = 0
+    if(books[i].name == pageBook){
+        books[i].pages = pag
+    } else (
+        i++
+    )
 }
 
-console.log(booksArray)
+//page("bookName", 350)
+
+
+
+
+
+const users = [
+    { name: "John", surname: "Doe", birthdate: "1990-01-01", email: "john.doe@example.com", password: "password123" },
+    { name: "Jane", surname: "Doe", birthdate: "1995-03-01", email: "jane.doe@example.com", password: "password456" },
+    { name: "Bob", surname: "Smith", birthdate: "1985-02-01", email: "bob.smith@example.com", password: "password789" },
+    { name: "Alice", surname: "Johnson", birthdate: "2000-04-01", email: "alice.johnson@example.com", password: "password000" }
+    ];
+
+function selectUsers(users, date) {
+    const validBirthdate = /^\d{4}-\d{2}-\d{2}$/;
+    const validEmail = /^[a-z]+\.[a-z]+@[a-z]+\.[a-z]+$/;
+    return users.filter(user => {
+        return validBirthdate.test(user.birthdate) && validEmail.test(user.email) && user.name !== "" && user.surname !== "" && new Date(user.birthdate) >= new Date(date);
+    }).sort((a, b) => new Date(b.birthdate) - new Date(a.birthdate));
+}
+
+let SortUsers = (selectUsers(users, 1985))
+
+const filterAndSortUsers = (date) =>{
+    let c = SortUsers.filter((currentValue) =>{
+        let year = currentValue.birthdate.slice(0,4)
+        year = Number(year)
+        return year >= date
+    })
+    console.log(c)
+}
+filterAndSortUsers(1980)//сдесь задается дата по которой происходит филтрация массива по дате(от 1980- ∞)
