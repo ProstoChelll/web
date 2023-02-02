@@ -256,11 +256,11 @@
     </section>
     <div class = "all">
         <div class="buy__background">
-            <form class = "form" action="#" onclick="treatment()">
+            <form class = "form" action="#" onclick="isValid()">
                 <img class = "buy__img" src="img/cross.svg">
                 <div class = "name">
                     <p>имя</p>
-                    <input name="username" type="text" "> <!--         сделать onblur в js          -->
+                    <input name="username" type="text" > <!--         сделать onblur в js          -->
                     <span class = "username__span" style="color: rgb(255, 0, 0); display: none; position: absolute; margin-top: 50px;">тут какая то ошибка</span>
                 </div>
                 <div class = "surname">
@@ -298,22 +298,22 @@
                 <button class = "next" onclick="return false">далее</button>
                 <button class = "next__notactivated" onclick="return false">далее</button>
             </form>
-            <div class = "catalog__skateboards">
-                <img class = "buy__img2" src="img/cross.svg">
-                <h2>каталог скейтов</h2>
-                <button class = "catalog__skateboards__button">закончить</button>
-            </div>
-            <div class = "catalog__revs">
-                <img class = "buy__img3" src="img/cross.svg">
-                <h2>каталог самокатов</h2>
-                <button class = "catalog__revs__button">закончить</button>
-            </div>
             <form>
+                <div class = "catalog__skateboards">
+                    <img class = "buy__img2" src="img/cross.svg">
+                    <h2>каталог скейтов</h2>
+                    <button class = "catalog__skateboards__button">закончить</button>
+                </div>
+                <div class = "catalog__revs">
+                    <img class = "buy__img3" src="img/cross.svg">
+                    <h2>каталог самокатов</h2>
+                    <button class = "catalog__revs__button">закончить</button>
+                </div>
+            </form>
                 <div class = "finish">
                     <img class = "buy__img4" src="img/cross.svg">
                     <h2>ваш заказ оформлен<br>и скоро будлет доставлен</h2>
                 </div>
-            </form>
         </div>
     </div>
     <script src="script.js"></script>

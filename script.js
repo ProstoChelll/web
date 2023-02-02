@@ -138,37 +138,64 @@ let formElemnts = {
     userEmail: "",
     userLocation: ""
 }
-function toggleClass(element, clasz) {
-    element.classList.toggle(clasz)
-}
-const setValue = (input, condition) => {
-    if (condition) {
-        formElemnts.userName = ""
-        toggleClass(input, "error")
-        toggleClass(userNameSpan, "block")
+
+let arrFormElemnts = [formElemnts.userName , formElemnts.surName , formElemnts.userPhon , formElemnts.userEmail , formElemnts.userLocation]
+
+const valid = (condition) => {
+    if(condition){
+        arrFormElemnts[0] = form.username.value
+        arrFormElemnts[1] = form.surname.value
+        arrFormElemnts[2] = form.userphon.value
+        arrFormElemnts[3] = form.useremail.value
+        arrFormElemnts[4] = form.userlocation.value
+    } else {
+        arrFormElemnts[0] = ""
+        arrFormElemnts[1] = ""
+        arrFormElemnts[2] = ""
+        arrFormElemnts[3] = ""
+        arrFormElemnts[4] = ""
     }
-    else {
-        formElemnts.userName = input.value
-        toggleClass(input, "error")
-        toggleClass(userNameSpan, "block")
-    }
+    console.log(arrFormElemnts)
 }
-const formInputs = [form.username, form.username, form.username, form.username, form.username]
-const isValid = () => {
-    return formInputs.map((input, index) => {
-        console.log(formInputs[index].value < 10)
-        return setValue(formInputs[index], formInputs[index].value < 10)
+
+const isValid = () =>{
+    return arrFormElemnts.map((input, index) => {
+        return valid(arrFormElemnts[index].length < 2)
     })
 }
 
-const treatment = () => {
-    if (isValid() == false) {
-        buttonNotActiv.style.display = "none"
-    }
-}
+form.addEventListener("click", () =>{
+    isValid()
+})
 
+// function toggleClass(element, clasz) {
+//     element.classList.toggle(clasz)
+// }
+// const setValue = (input, condition) => {
+//     if (condition) {
+//         formElemnts.userName = ""
+//         toggleClass(input, "error")
+//         toggleClass(userNameSpan, "block")
+//     }
+//     else {
+//         formElemnts.userName = input.value
+//         toggleClass(input, "error")
+//         toggleClass(userNameSpan, "block")
+//     }
+// }
+// const formInputs = [form.username, form.username, form.username, form.username, form.username]
+// const isValid = () => {
+//     return formInputs.map((input, index) => {
+//         console.log(formInputs[index].value < 10)
+//         return setValue(formInputs[index], formInputs[index].value < 10)
+//     })
+// }
 
-
+// const treatment = () => {
+//     if (isValid() == false) {
+//         buttonNotActiv.style.display = "none"
+//     }
+// }
 
 
 
